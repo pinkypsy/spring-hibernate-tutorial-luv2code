@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "student")
@@ -15,14 +16,18 @@ public class Student {
     private String lastName;
     @Column(name = "email")
     private String email;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "birth_date")
+    private Date birthDate;
 
     public Student() {
     }
 
-    public Student(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email, Date birthDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.birthDate = birthDate;
     }
 
 
@@ -65,7 +70,15 @@ public class Student {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", birthDate='" + birthDate + '\'' +
                 '}';
     }
 
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
 }

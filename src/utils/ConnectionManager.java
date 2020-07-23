@@ -1,29 +1,31 @@
+package utils;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionManager
 {
-	private static ConnectionManager instance = null;
+/*	private static utils.ConnectionManager instance = null;
 
 	private static String userName = null;
 	private static String password = null;
 
-	private DBtype dbType = DBtype.MySQL;
+	private utils.DBtype dbType = utils.DBtype.MySQL;
 
 	private Connection conn = null;
 
-	private ConnectionManager() {
+	private utils.ConnectionManager() {
 	}
 
-	public static ConnectionManager getInstance() {
+	public static utils.ConnectionManager getInstance() {
 		if (instance == null) {
-			instance = new ConnectionManager();
+			instance = new utils.ConnectionManager();
 		}
 		return instance;
 	}
 
-	public void setDBType(DBtype dbType) {
+	public void setDBType(utils.DBtype dbType) {
 		this.dbType = dbType;
 	}
 
@@ -87,6 +89,6 @@ public class ConnectionManager
 			conn = null;
 		} catch (Exception e) {
 		}
-	}
+	}*/
 
 }
